@@ -1,0 +1,97 @@
+{
+  "source_assets_modified": false,
+  "physics_modified": true,
+  "scale_and_orientation_modified": false,
+  "notes": [
+    "Source dimensions and orientation are preserved; the previous preview's 24 cm width normalization is not applied.",
+    "Per user request, EASG copies of google_scan-dish_0158 and google_scan-dish_0079 have mass changed from 10 kg to 0.1 kg. Only physics:mass was changed; source assets and all other USD properties are unchanged. verified_files records the original import verification.",
+    "00000 has no explicitly authored friction or mass; configure these at import when required.",
+    "All four use convex decomposition. Interior collision clearance has not been validated by a drop test.",
+    "OmniPBR.mdl and gltf/pbr.mdl are renderer MDL dependencies; model textures resolve within EASG."
+  ],
+  "assets": [
+    {
+      "file": "objects/rigid/plate/plate_white/Aligned_obj.usd",
+      "source": "/mnt/data/yijingkun/official_sim_assets/basic/sort_the_tray_on_rack/plate/plate_white",
+      "verified_files": 6,
+      "external_usd_layers": [],
+      "unresolved": [
+        "OmniPBR.mdl"
+      ],
+      "physics": {
+        "physics:mass": [
+          "0.10000000149011612"
+        ],
+        "physics:approximation": [
+          "convexDecomposition"
+        ],
+        "physics:dynamicFriction": [
+          "1.0"
+        ],
+        "physics:staticFriction": [
+          "1.0"
+        ]
+      }
+    },
+    {
+      "file": "objects/rigid/plate/google_scan-dish_0158/Aligned_obj.usd",
+      "source": "/mnt/data/yijingkun/official_sim_assets/pick_and_place/pre-train-place/assets/inner/dish/google_scan-dish_0158",
+      "verified_files": 3,
+      "external_usd_layers": [],
+      "unresolved": [
+        "OmniPBR.mdl"
+      ],
+      "physics": {
+        "physics:mass": [
+          "0.10000000149011612"
+        ],
+        "physics:approximation": [
+          "convexDecomposition"
+        ],
+        "physics:dynamicFriction": [
+          "1.0"
+        ],
+        "physics:staticFriction": [
+          "1.0"
+        ]
+      }
+    },
+    {
+      "file": "objects/rigid/plate/google_scan-dish_0079/Aligned_obj.usd",
+      "source": "/mnt/data/yijingkun/official_sim_assets/pick_and_place/pre-train-place/assets/inner/dish/google_scan-dish_0079",
+      "verified_files": 3,
+      "external_usd_layers": [],
+      "unresolved": [
+        "OmniPBR.mdl"
+      ],
+      "physics": {
+        "physics:mass": [
+          "0.10000000149011612"
+        ],
+        "physics:approximation": [
+          "convexDecomposition"
+        ],
+        "physics:dynamicFriction": [
+          "1.0"
+        ],
+        "physics:staticFriction": [
+          "1.0"
+        ]
+      }
+    },
+    {
+      "file": "objects/rigid/plate/00000/object.usdz",
+      "source": "/mnt/data/yijingkun/Document/ICLR2027/BenchMark/RoboDojo/Assets/Object/RoboDojo/Clutter/plate/00000",
+      "verified_files": 2,
+      "external_usd_layers": [],
+      "unresolved": [
+        "gltf/pbr.mdl"
+      ],
+      "physics": {
+        "physics:approximation": [
+          "convexDecomposition"
+        ]
+      }
+    }
+  ]
+}

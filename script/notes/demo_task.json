@@ -1,0 +1,11 @@
+[
+  {"type": "joint", "positions": [0, -0.785, 0, -2.356, 0, 1.571, 0.785], "duration": 1},
+  {"type": "gripper", "width": 0.08},
+  {"type": "pose", "position": [0.00, -0.15, 1.16], "orientation": [0, 1, 0, 0], "duration": 3},
+  {"type": "pose", "position": [0.13, -0.15, 1.10], "orientation": [0, 1, 0, 0], "duration": 2},
+  {"type": "wait", "duration": 0.5},
+  {"type": "pose", "position": [0.05, 0.16, 1.17], "orientation": [0, 1, 0, 0], "duration": 3},
+  {"type": "gripper", "width": 0.02},
+  {"type": "gripper", "width": 0.08},
+  {"type": "joint", "positions": [0, -0.785, 0, -2.356, 0, 1.571, 0.785], "duration": 3}
+]

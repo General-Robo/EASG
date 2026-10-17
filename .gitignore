@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+
+.env
+.env.*
+*keys*.json
+
+# One-off diagnostics and migration scripts
+script/temp/
+script/test/
+script/note/
+script/prompt/altanatives
+script/prompt/temp/
+output/
+python.sh
+Libero-finetune/
+note.txt
+setting.txt
+task_path.txt
+temp/
+README-usage.md
+Asset/objects/altanatives

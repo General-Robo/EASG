@@ -1,0 +1,129 @@
+[
+  {
+    "file": "robot/franka/robot.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "environment/table0/instance.usd",
+    "external_usd_layers": [],
+    "unresolved": []
+  },
+  {
+    "file": "objects/rigid/cube/object.usdz",
+    "external_usd_layers": [],
+    "unresolved": [
+      "gltf/pbr.mdl"
+    ]
+  },
+  {
+    "file": "objects/rigid/google_scan-book/google_scan-book_0001/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/rigid/omniobject3d-banana/omniobject3d-banana_001/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/rigid/omniobject3d-mug/google_scan-mug_0160/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/articulated/laptop/laptop9968/instance.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/rigid/charger/00000/object.usdz",
+    "external_usd_layers": [],
+    "unresolved": []
+  },
+  {
+    "file": "objects/rigid/mug/00000/object.usdz",
+    "external_usd_layers": [],
+    "unresolved": []
+  },
+  {
+    "file": "objects/rigid/bowl/00001/object.usdz",
+    "external_usd_layers": [],
+    "unresolved": []
+  },
+  {
+    "file": "objects/articulated/egg_holder/00000/object.usdz",
+    "external_usd_layers": [],
+    "unresolved": []
+  },
+  {
+    "file": "objects/articulated/SpringButton/00002/object.usdz",
+    "external_usd_layers": [],
+    "unresolved": []
+  },
+  {
+    "file": "objects/rigid/cucumber/omniobject3d-cucumber_008/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/articulated/drawer/nightstand_0000_1/instance.usd",
+    "external_usd_layers": [],
+    "unresolved": []
+  },
+  {
+    "file": "objects/rigid/carrot/omniobject3d-carrot_001/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": ["OmniPBR.mdl"]
+  },
+  {
+    "file": "objects/rigid/carrot/omniobject3d-carrot_017/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": ["OmniPBR.mdl"]
+  },
+  {
+    "file": "objects/rigid/cucumber/omniobject3d-cucumber_015/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": ["OmniPBR.mdl"]
+  },
+  {
+    "file": "objects/rigid/plate/plate_white/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/rigid/plate/google_scan-dish_0158/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/rigid/plate/google_scan-dish_0079/Aligned_obj.usd",
+    "external_usd_layers": [],
+    "unresolved": [
+      "OmniPBR.mdl"
+    ]
+  },
+  {
+    "file": "objects/rigid/plate/00000/object.usdz",
+    "external_usd_layers": [],
+    "unresolved": [
+      "gltf/pbr.mdl"
+    ]
+  }
+]

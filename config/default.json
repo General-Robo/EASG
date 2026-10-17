@@ -1,0 +1,16 @@
+{
+  "gripper_max_width_m": 0.08,
+  "max_translation_cm": 12.0,
+  "max_rotation_deg": 60.0,
+  "table_height_m": 0.75,
+  "action_duration_s": 1.4,
+  "arm_duration_s": 2.0,
+  "gripper_duration_s": 1.0,
+  "initial_pose_duration_s": 3.0,
+  "action_settle_s": 0.5,
+  "completion_settle_s": 1.5,
+  "force_backoff_duration_s": 0.5,
+  "workmat_thickness_m": 0.020,
+  "workmat_contact_stiffness": 1000.0,
+  "workmat_contact_damping": 10.0
+}

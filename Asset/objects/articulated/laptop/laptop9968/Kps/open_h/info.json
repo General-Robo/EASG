@@ -1,0 +1,37 @@
+{
+    "object_keypoints": {
+        "articulated_object_head": [
+            -0.6083583222006086,
+            0.8252761383500293,
+            -0.23584946421036568
+        ],
+        "articulated_object_tail": [
+            -0.5945902104270891,
+            0.5340329384952527,
+            -0.16480710422211042
+        ],
+        "base_object_contact_point": [
+            -0.600000679042203,
+            0.6487641667952706,
+            -0.19554916677504874
+        ]
+    },
+    "object_scale": [
+        0.2615934015416167,
+        0.2615934015416167,
+        0.2615934015416167,
+        1.0
+    ],
+    "object_name": "laptop9968",
+    "object_usd": "assets/articulations/laptop/laptop9968/instance.usd",
+    "object_link_path": "/laptop9968/instance/contact_link",
+    "object_base_path": "/laptop9968/instance/base",
+    "object_prim_path": "/laptop9968",
+    "object_revolute_joint_path": "/laptop9968/instance/base/contact_link_revolute",
+    "object_link0_rot_axis": "-x",
+    "object_base_front_axis": "-x",
+    "object_link0_contact_axis": "-x",
+    "object_link0_contact_axis_rotation_axis": "",
+    "object_link0_contact_axis_rotation_angle": 0,
+    "joint_index": 0
+}

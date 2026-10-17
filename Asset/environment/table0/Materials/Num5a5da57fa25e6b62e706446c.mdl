@@ -1,0 +1,284 @@
+﻿mdl 1.6;
+
+import ::math::*;
+import ::state::*;
+import ::tex::*;
+import ::anno::*;
+using .::OmniUe4Function import *;
+using .::OmniUe4Base import *;
+
+export annotation sampler_color();
+export annotation sampler_normal();
+export annotation sampler_grayscale();
+export annotation sampler_alpha();
+export annotation sampler_masks();
+export annotation sampler_distancefield();
+export annotation dither_masked_off();
+export annotation world_space_normal();
+
+export material Num5a5da57fa25e6b62e706446c(
+	uniform texture_2d Normal_Tex = texture_2d("./Textures/normal.png",::tex::gamma_linear)
+	[[
+		anno::display_name("Normal_Tex"),
+		anno::ui_order(32),
+		anno::in_group("Normal"),
+		sampler_normal()
+	]],
+	float4 Normal_UVA = float4(1.0,1.0,0.0,0.0)
+	[[
+		anno::display_name("Normal_UVA"),
+		anno::ui_order(32),
+		anno::in_group("Normal")
+	]],
+	float EmissiveIntensity = 0.0
+	[[
+		anno::display_name("EmissiveIntensity"),
+		anno::ui_order(32),
+		anno::in_group("EmissiveColor")
+	]],
+	float IsEmissiveTex = 0.0
+	[[
+		anno::display_name("IsEmissiveTex"),
+		anno::in_group("EmissiveColor")
+	]],
+	float4 Emissive_Color = float4(1.0,1.0,1.0,1.0)
+	[[
+		anno::display_name("Emissive_Color"),
+		anno::ui_order(32),
+		anno::in_group("EmissiveColor")
+	]],
+	uniform texture_2d Emissive_Tex = texture_2d("./Textures/white.png",::tex::gamma_srgb)
+	[[
+		anno::display_name("Emissive_Tex"),
+		anno::ui_order(32),
+		anno::in_group("EmissiveColor"),
+		sampler_color()
+	]],
+	float4 Emissive_UVA = float4(1.0,1.0,0.0,0.0)
+	[[
+		anno::display_name("Emissive_UVA"),
+		anno::ui_order(32),
+		anno::in_group("EmissiveColor")
+	]],
+	float IsBaseColorTex = 0.0
+	[[
+		anno::display_name("IsBaseColorTex"),
+		anno::in_group("BaseColor")
+	]],
+	float4 BaseColor_Color = float4(1.0,1.0,1.0,1.0)
+	[[
+		anno::display_name("BaseColor_Color"),
+		anno::ui_order(32),
+		anno::in_group("BaseColor")
+	]],
+	uniform texture_2d BaseColor_Tex = texture_2d("./Textures/white.png",::tex::gamma_srgb)
+	[[
+		anno::display_name("BaseColor_Tex"),
+		anno::ui_order(32),
+		anno::in_group("BaseColor"),
+		sampler_color()
+	]],
+	float4 BaseColor_UVA = float4(1.0,1.0,0.0,0.0)
+	[[
+		anno::display_name("BaseColor_UVA"),
+		anno::ui_order(32),
+		anno::in_group("BaseColor")
+	]],
+	float IsMetallicTex = 0.0
+	[[
+		anno::display_name("IsMetallicTex"),
+		anno::in_group("Metallic")
+	]],
+	float4 Metallic_Color = float4(0.0,0.0,0.0,1.0)
+	[[
+		anno::display_name("Metallic_Color"),
+		anno::ui_order(32),
+		anno::in_group("Metallic")
+	]],
+	uniform texture_2d Metallic_Tex = texture_2d("./Textures/black.png",::tex::gamma_srgb)
+	[[
+		anno::display_name("Metallic_Tex"),
+		anno::ui_order(32),
+		anno::in_group("Metallic"),
+		sampler_color()
+	]],
+	float4 Metallic_UVA = float4(1.0,1.0,0.0,0.0)
+	[[
+		anno::display_name("Metallic_UVA"),
+		anno::ui_order(32),
+		anno::in_group("Metallic")
+	]],
+	float IsSpecularTex = 0.0
+	[[
+		anno::display_name("IsSpecularTex"),
+		anno::in_group("Specular")
+	]],
+	float4 Specular_Color = float4(1.0,1.0,1.0,1.0)
+	[[
+		anno::display_name("Specular_Color"),
+		anno::ui_order(32),
+		anno::in_group("Specular")
+	]],
+	uniform texture_2d Specular_Tex = texture_2d("./Textures/white.png",::tex::gamma_srgb)
+	[[
+		anno::display_name("Specular_Tex"),
+		anno::ui_order(32),
+		anno::in_group("Specular"),
+		sampler_color()
+	]],
+	float4 Specular_UVA = float4(1.0,1.0,0.0,0.0)
+	[[
+		anno::display_name("Specular_UVA"),
+		anno::ui_order(32),
+		anno::in_group("Specular")
+	]],
+	float IsGlossTex = 0.0
+	[[
+		anno::display_name("IsGlossTex"),
+		anno::in_group("Roughness")
+	]],
+	float4 Gloss_Color = float4(0.1,0.1,0.1,1.0)
+	[[
+		anno::display_name("Gloss_Color"),
+		anno::ui_order(32),
+		anno::in_group("Roughness")
+	]],
+	uniform texture_2d Gloss_Tex = texture_2d("./Textures/white.png",::tex::gamma_srgb)
+	[[
+		anno::display_name("Gloss_Tex"),
+		anno::ui_order(32),
+		anno::in_group("Roughness"),
+		sampler_color()
+	]],
+	float4 Gloss_UVA = float4(1.0,1.0,0.0,0.0)
+	[[
+		anno::display_name("Gloss_UVA"),
+		anno::ui_order(32),
+		anno::in_group("Roughness")
+	]],
+	float PolygonOffset = 0.0
+	[[
+		anno::display_name("PolygonOffset"),
+		anno::ui_order(32),
+		anno::in_group("WorldPosition")
+	]],
+	int MaxTexCoordIndex = 3
+	[[
+		anno::hidden()
+	]])
+ = 
+	let {
+	float3 Local82 = ::camera_position();
+	float3 Local83 = (Local82 - (::convert_to_left_hand(state::transform_point(state::coordinate_internal,state::coordinate_world,state::position()), true)*state::meters_per_scene_unit()*100.0));
+	float Local84 = math::dot(Local83, Local83);
+	float Local85 = math::sqrt(Local84);
+	float3 Local86 = (Local83 / Local85);
+	float3 Local87 = (Local86 * PolygonOffset);
+
+	float3 WorldPositionOffset_mdl = Local87;
+	float2 CustomizedUV0_mdl = float2(state::texture_coordinate(math::min(0,MaxTexCoordIndex)).x,1.0-state::texture_coordinate(math::min(0,MaxTexCoordIndex)).y);
+
+	float2 Local0 = (float2(0.5,0.5) * -1.0);
+	float Local1 = (CustomizedUV0_mdl.x * float3(Normal_UVA.x,Normal_UVA.y,Normal_UVA.z).x);
+	float Local2 = (CustomizedUV0_mdl.y * float3(Normal_UVA.x,Normal_UVA.y,Normal_UVA.z).y);
+	float2 Local3 = (Local0 + float2(Local1,Local2));
+	float Local4 = (3.141592 * -2.0);
+	float Local5 = (float3(Normal_UVA.x,Normal_UVA.y,Normal_UVA.z).z / Local4);
+	float Local6 = (Local5 * 6.283185);
+	float Local7 = math::cos(Local6);
+	float Local8 = math::sin(Local6);
+	float Local9 = (Local8 * -1.0);
+	float Local10 = math::dot(Local3, float2(Local7,Local9));
+	float Local11 = math::dot(Local3, float2(Local8,Local7));
+	float2 Local12 = (float2(0.5,0.5) + float2(Local10,Local11));
+	float4 Local13 = ::unpack_normal_map(tex::lookup_float4(Normal_Tex,float2(Local12.x,1.0-Local12.y),tex::wrap_repeat,tex::wrap_repeat));
+	float3 Local14 = ((math::abs(1.0 - 1.0) > 0.00001) ? (float3(0.0,0.0,0.0)) : float3(Local13.x,Local13.y,Local13.z));
+
+	float3 Normal_mdl = Local14;
+
+	float Local15 = (CustomizedUV0_mdl.x * float3(Emissive_UVA.x,Emissive_UVA.y,Emissive_UVA.z).x);
+	float Local16 = (CustomizedUV0_mdl.y * float3(Emissive_UVA.x,Emissive_UVA.y,Emissive_UVA.z).y);
+	float2 Local17 = (Local0 + float2(Local15,Local16));
+	float Local18 = (float3(Emissive_UVA.x,Emissive_UVA.y,Emissive_UVA.z).z / Local4);
+	float Local19 = (Local18 * 6.283185);
+	float Local20 = math::cos(Local19);
+	float Local21 = math::sin(Local19);
+	float Local22 = (Local21 * -1.0);
+	float Local23 = math::dot(Local17, float2(Local20,Local22));
+	float Local24 = math::dot(Local17, float2(Local21,Local20));
+	float2 Local25 = (float2(0.5,0.5) + float2(Local23,Local24));
+	float4 Local26 = tex::lookup_float4(Emissive_Tex,float2(Local25.x,1.0-Local25.y),tex::wrap_repeat,tex::wrap_repeat);
+	float3 Local27 = ((math::abs(IsEmissiveTex - 1.0) > 0.00001) ? (float3(Emissive_Color.x,Emissive_Color.y,Emissive_Color.z)) : float3(Local26.x,Local26.y,Local26.z));
+	float3 Local28 = (EmissiveIntensity * Local27);
+	float Local29 = (CustomizedUV0_mdl.x * float3(BaseColor_UVA.x,BaseColor_UVA.y,BaseColor_UVA.z).x);
+	float Local30 = (CustomizedUV0_mdl.y * float3(BaseColor_UVA.x,BaseColor_UVA.y,BaseColor_UVA.z).y);
+	float2 Local31 = (Local0 + float2(Local29,Local30));
+	float Local32 = (float3(BaseColor_UVA.x,BaseColor_UVA.y,BaseColor_UVA.z).z / Local4);
+	float Local33 = (Local32 * 6.283185);
+	float Local34 = math::cos(Local33);
+	float Local35 = math::sin(Local33);
+	float Local36 = (Local35 * -1.0);
+	float Local37 = math::dot(Local31, float2(Local34,Local36));
+	float Local38 = math::dot(Local31, float2(Local35,Local34));
+	float2 Local39 = (float2(0.5,0.5) + float2(Local37,Local38));
+	float4 Local40 = tex::lookup_float4(BaseColor_Tex,float2(Local39.x,1.0-Local39.y),tex::wrap_repeat,tex::wrap_repeat);
+	float3 Local41 = ((math::abs(IsBaseColorTex - 1.0) > 0.00001) ? (float3(BaseColor_Color.x,BaseColor_Color.y,BaseColor_Color.z)) : float3(Local40.x,Local40.y,Local40.z));
+	float Local42 = (CustomizedUV0_mdl.x * float3(Metallic_UVA.x,Metallic_UVA.y,Metallic_UVA.z).x);
+	float Local43 = (CustomizedUV0_mdl.y * float3(Metallic_UVA.x,Metallic_UVA.y,Metallic_UVA.z).y);
+	float2 Local44 = (Local0 + float2(Local42,Local43));
+	float Local45 = (float3(Metallic_UVA.x,Metallic_UVA.y,Metallic_UVA.z).z / Local4);
+	float Local46 = (Local45 * 6.283185);
+	float Local47 = math::cos(Local46);
+	float Local48 = math::sin(Local46);
+	float Local49 = (Local48 * -1.0);
+	float Local50 = math::dot(Local44, float2(Local47,Local49));
+	float Local51 = math::dot(Local44, float2(Local48,Local47));
+	float2 Local52 = (float2(0.5,0.5) + float2(Local50,Local51));
+	float4 Local53 = tex::lookup_float4(Metallic_Tex,float2(Local52.x,1.0-Local52.y),tex::wrap_repeat,tex::wrap_repeat);
+	float3 Local54 = ((math::abs(IsMetallicTex - 1.0) > 0.00001) ? (float3(Metallic_Color.x,Metallic_Color.y,Metallic_Color.z)) : float3(Local53.x,Local53.y,Local53.z));
+	float Local55 = (CustomizedUV0_mdl.x * float3(Specular_UVA.x,Specular_UVA.y,Specular_UVA.z).x);
+	float Local56 = (CustomizedUV0_mdl.y * float3(Specular_UVA.x,Specular_UVA.y,Specular_UVA.z).y);
+	float2 Local57 = (Local0 + float2(Local55,Local56));
+	float Local58 = (float3(Specular_UVA.x,Specular_UVA.y,Specular_UVA.z).z / Local4);
+	float Local59 = (Local58 * 6.283185);
+	float Local60 = math::cos(Local59);
+	float Local61 = math::sin(Local59);
+	float Local62 = (Local61 * -1.0);
+	float Local63 = math::dot(Local57, float2(Local60,Local62));
+	float Local64 = math::dot(Local57, float2(Local61,Local60));
+	float2 Local65 = (float2(0.5,0.5) + float2(Local63,Local64));
+	float4 Local66 = tex::lookup_float4(Specular_Tex,float2(Local65.x,1.0-Local65.y),tex::wrap_repeat,tex::wrap_repeat);
+	float3 Local67 = ((math::abs(IsSpecularTex - 1.0) > 0.00001) ? (float3(Specular_Color.x,Specular_Color.y,Specular_Color.z)) : float3(Local66.x,Local66.y,Local66.z));
+	float Local68 = (CustomizedUV0_mdl.x * float3(Gloss_UVA.x,Gloss_UVA.y,Gloss_UVA.z).x);
+	float Local69 = (CustomizedUV0_mdl.y * float3(Gloss_UVA.x,Gloss_UVA.y,Gloss_UVA.z).y);
+	float2 Local70 = (Local0 + float2(Local68,Local69));
+	float Local71 = (float3(Gloss_UVA.x,Gloss_UVA.y,Gloss_UVA.z).z / Local4);
+	float Local72 = (Local71 * 6.283185);
+	float Local73 = math::cos(Local72);
+	float Local74 = math::sin(Local72);
+	float Local75 = (Local74 * -1.0);
+	float Local76 = math::dot(Local70, float2(Local73,Local75));
+	float Local77 = math::dot(Local70, float2(Local74,Local73));
+	float2 Local78 = (float2(0.5,0.5) + float2(Local76,Local77));
+	float4 Local79 = tex::lookup_float4(Gloss_Tex,float2(Local78.x,1.0-Local78.y),tex::wrap_repeat,tex::wrap_repeat);
+	float3 Local80 = ((math::abs(IsGlossTex - 1.0) > 0.00001) ? (float3(Gloss_Color.x,Gloss_Color.y,Gloss_Color.z)) : float3(Local79.x,Local79.y,Local79.z));
+	float3 Local81 = (1.0 - Local80);
+
+	float3 EmissiveColor_mdl = Local28;
+	float OpacityMask_mdl = 1.0;
+	float3 BaseColor_mdl = Local41;
+	float Metallic_mdl = Local54.x;
+	float Specular_mdl = Local67.x;
+	float Roughness_mdl = Local81.x;
+
+	} in
+		::OmniUe4Base(
+			base_color: BaseColor_mdl,
+			metallic: Metallic_mdl,
+			roughness: Roughness_mdl,
+			specular: Specular_mdl,
+			normal: Normal_mdl,
+			opacity: OpacityMask_mdl,
+			emissive_color: EmissiveColor_mdl,
+			displacement: WorldPositionOffset_mdl,
+			two_sided: false);

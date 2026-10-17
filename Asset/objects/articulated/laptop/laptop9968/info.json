@@ -1,0 +1,35 @@
+{
+    "object_keypoints": {
+        "articulated_object_head": [
+            -0.5954443376974538,
+            0.734611762436081,
+            -0.21855190277215591
+        ],
+        "articulated_object_tail": [
+            -0.6048454324951207,
+            0.05839793154344905,
+            -0.037360751543630055
+        ],
+        "base_object_contact_point": [
+            -0.5912430681925948,
+            0.004298756648421311,
+            -0.1243484113704252
+        ]
+    },
+    "object_scale": [
+        0.32958703311588483,
+        0.32958703311588483,
+        0.32958703311588483,
+        1.0
+    ],
+    "object_name": "laptop9968",
+    "object_usd": "assets/laptop_gensim2/laptop9968/instance.usd",
+    "object_link_path": "/laptop9968/instance/contact_link",
+    "object_base_path": "/laptop9968/instance/base",
+    "object_prim_path": "/laptop9968",
+    "object_revolute_joint_path": "/laptop9968/instance/base/contact_link_revolute",
+    "object_link0_rot_axis": "-x",
+    "object_link0_contact_axis": "-x",
+    "object_base_front_axis": "-x",
+    "joint_index": 0
+}
