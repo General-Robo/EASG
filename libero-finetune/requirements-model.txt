@@ -1,0 +1,6 @@
+# Versions from the source training environment; install CUDA-compatible torch separately.
+transformers==5.14.1
+peft==0.19.1
+accelerate==1.14.0
+numpy==2.3.5
+Pillow==12.3.0

@@ -1,0 +1,15 @@
+# Install torch separately; install LIBERO with --no-deps after these packages.
+numpy==1.26.0
+robosuite==1.4.1
+mujoco==3.2.3
+bddl==1.0.1
+gym==0.25.2
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+Pillow==11.3.0
+h5py==3.16.0
+easydict==1.13
+PyYAML
+matplotlib==3.10.3
+cloudpickle==3.1.2
+numba==0.59.1

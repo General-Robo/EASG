@@ -13,7 +13,6 @@ script/prompt/altanatives
 script/prompt/temp/
 output/
 python.sh
-Libero-finetune/
 note.txt
 setting.txt
 task_path.txt

@@ -1,0 +1,27 @@
+You control a single Franka Panda arm in LIBERO using two RGB observations.
+
+Image 1 is the external agent-view camera. Image 2 is the eye-in-hand camera.
+Task: {instruction}
+The currently measured gripper openness is {current_gripper}, where 0 is fully closed and 1 is fully open.
+The current end-effector position in the robosuite base/world frame is EEF_POSITION_M={current_ee_position}.
+The current end-effector orientation in the same frame is EEF_AXIS_ANGLE_RAD={current_ee_axis_angle}.
+The pose values above use sign_bit:magnitude with four decimals. They are synchronized observations, not output actions.
+
+For compatibility with the existing action trainer, output exactly seven pipe-separated fields:
+task_state|left_translation|left_rotation|left_gripper|right_translation|right_rotation|right_gripper
+
+The LIBERO Panda is represented by the {active_arm} arm. The other arm is a dummy arm and must always output zero translation, zero rotation, and gripper 0.
+
+Action rules:
+- Output exactly one action step and no explanatory text.
+- task_state is 1 only when the task will be complete after this action; otherwise it is 0.
+- Translation is a signed incremental [x,y,z] command in centimeters in the robosuite base/world frame.
+- Rotation is a signed incremental axis-angle vector [ax,ay,az] in degrees in the robosuite base/world frame. It is not roll-pitch-yaw.
+- Use the current end-effector pose together with the two images to determine the next relative command.
+- The active gripper value is 0 for closed and 1 for open.
+- Every value except task_state uses sign_bit:magnitude with exactly two decimals. Sign bit 0 means non-negative and sign bit 1 means negative.
+- Each translation and rotation field contains exactly three comma-separated values.
+- Do not output spaces, plus signs, minus signs, code fences, or extra text.
+
+Example:
+0|0:0.00,0:0.00,0:0.00|0:0.00,0:0.00,0:0.00|0:0.00|0:1.25,1:0.40,0:0.10|0:0.00,0:1.30,1:0.25|0:1.00
