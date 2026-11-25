@@ -18,7 +18,7 @@
 
 This repository currently provides a simulation implementation of zero-shot robotic manipulation with EASG. It demonstrates the core action-space grounding and closed-loop execution pipeline. The simulation setup, implementation details, and performance may differ from the experiments reported in the paper.
 
-# Overview
+# 🧭 Overview
 
   <u>**tl;dr**</u>: We show that <u>**E**xplicit **A**ction-**S**pace **G**rounding</u> enables pretrained VLMs not only to perform <u>zero-shot robotic manipulation</u>, but also to improve through <u>subsequent robot-data fine-tuning</u>.
 
@@ -40,7 +40,7 @@ EASG (Explicit Action-Space Grounding) projects a Tool Center Point (TCP)-center
 
 <p align="center">1. <strong>Grounded action space.</strong> 2. <strong>Act with native text.</strong> 3.<strong>VLM-Native Fine-tuning.</strong></p>
 
-# Usage
+# 🛠️ Usage
 
 Run the commands below in **Bash on Linux**, from the EASG project root:
 
@@ -244,7 +244,7 @@ Open the output directory after a run:
 - `api_usage.json`: recorded API usage for online execution.
 
 
-# Citation
+# 📚 Citation
 
 If you find EASG useful, please consider citing:
 
