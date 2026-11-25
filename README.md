@@ -40,10 +40,6 @@ EASG (Explicit Action-Space Grounding) projects a Tool Center Point (TCP)-center
 
 <p align="center">1. <strong>Grounded action space.</strong> 2. <strong>Act with native text.</strong> 3.<strong>VLM-Native Fine-tuning.</strong></p>
 
-# TODO
-
-- [ ] Support robot-trajectory fine-tuning using the same TCP-centered textual action interface as zero-shot execution. Fine-tuned models will use the same action representation and execution pipeline.
-
 # Usage
 
 Run the commands below in **Bash on Linux**, from the EASG project root:
