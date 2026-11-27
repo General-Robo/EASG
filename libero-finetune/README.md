@@ -71,7 +71,7 @@ python scripts/validate_dataset.py "$DATA_ROOT"
 
 ### 2. Train the adapter
 
-Each suite’s recipe trains a new LoRA adapter on the pretrained base model with a learning rate of `5e-5`, a 90-epoch schedule, 4 samples per GPU, and 2 gradient accumulation steps.
+Each suite’s recipe trains a new LoRA adapter on the pretrained base model with a learning rate of `5e-5`, 4 samples per GPU, and 2 gradient accumulation steps. The schedules are 70 epochs for Spatial/Goal, 80 for Object, and 75 for Long (`libero_10`).
 
 ```bash
 conda activate easg-qwen

@@ -40,6 +40,10 @@ EASG (Explicit Action-Space Grounding) projects a Tool Center Point (TCP)-center
 
 <p align="center">1. <strong>Grounded action space.</strong> 2. <strong>Act with native text.</strong> 3.<strong>VLM-Native Fine-tuning.</strong></p>
 
+## Simulation demos
+
+![Synchronized external and wrist views at left, with banana, carrot, and cucumber trials at right](demo/previews/simulation-demos.gif)
+
 # 🛠️ Usage
 
 Run the commands below in **Bash on Linux**, from the EASG project root:
