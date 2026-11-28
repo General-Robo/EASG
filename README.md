@@ -1,3 +1,9 @@
+## Simulation demos
+
+**Try Qwen-3.8-27B zero-shot PnP case with 可观的 position generalization！**
+
+![Synchronized external and wrist views at left, with banana, carrot, and cucumber trials at right](demo/previews/simulation-demos.gif)
+
 <div align="center">
 
 <h1><img src="Asset/images/star.png" alt="EASG" width="42" height="42" align="absmiddle"> VLMs are Native Action Models</h1>
@@ -39,10 +45,6 @@ EASG (Explicit Action-Space Grounding) projects a Tool Center Point (TCP)-center
 </p>
 
 <p align="center">1. <strong>Grounded action space.</strong> 2. <strong>Act with native text.</strong> 3.<strong>VLM-Native Fine-tuning.</strong></p>
-
-## Simulation demos
-
-![Synchronized external and wrist views at left, with banana, carrot, and cucumber trials at right](demo/previews/simulation-demos.gif)
 
 # 🛠️ Usage
 
