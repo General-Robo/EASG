@@ -1,6 +1,6 @@
 ## Simulation demos
 
-**Try Qwen-3.8-27B zero-shot PnP case with 可观的 position generalization！**
+**Try Qwen-3.8-27B for zero-shot pick-and-place in the simulation with position generalization!**
 
 ![Synchronized external and wrist views at left, with banana, carrot, and cucumber trials at right](demo/previews/simulation-demos.gif)
 
